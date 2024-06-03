@@ -11,7 +11,7 @@ You will learn
 
 ## Important Dates
 
-The submission deadline is originally set for 6/17 at 23:59. However, this lab has a shorter execution period compared to others. Therefore, we'll accept submissions without late penalty until 6/20 at 23:59. After this extended deadline, late submissions are only accepted until 6/21 at 23:59(20%p dedection). No submission afterwards.
+The submission deadline is originally set for 6/17 at 23:59. However, this lab has a shorter execution period compared to others. Therefore, we'll accept submissions without late penalty until 6/20 at 23:59. After this extended deadline, **late submissions are only accepted until 6/21 at 23:59(20%p dedection). No submission afterwards.**
 
 
 | Date | Description |
