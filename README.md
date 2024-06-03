@@ -170,9 +170,9 @@ When every order in the request is generated, the kitchen thread that made the l
 ```mermaid
 sequenceDiagram
     participant C as Client
-    participant M as McDonald's Main
-    participant S as McDonald's Serving Thread
-    participant K as McDonald's Kitchen Thread
+    participant M as McDonald's<br>(Main)
+    participant S as McDonald's<br>(Serving Thread)
+    participant K as McDonald's<br>(Kitchen Thread)
     M-->>K: Run
     Activate M
     Activate K
@@ -182,26 +182,25 @@ sequenceDiagram
     M-->>S: Run and serve client
     Activate S
     Deactivate M
-    S->>C: Message: Welcome to McDonald's, customer!
-    C->>S: Message: Multi-order Request
-    S-->>K: Split the request into orders and place the orders in queue
+    S->>C: Message: Welcome to McDonald's, customer #xx
+    C->>S: Message: Can I have [sequence of order] burger(s)?
+    S-->>K: Place order in queue
     Deactivate S
-    Note right of M: Main thread awaits
-    other clients
+    Note right of M: Main thread awaits<br>other clients
     loop kitchen task
-      K->>K: Check queue and generate a burger
+      K->>K: Check queue <br> and generate burger
     end
-    Note right of K: When queue is empty, sleeps 2 seconds
-    K-->>S: If all burgers are generated, send signal to wake up S
+    Note right of K: When queue empty,<br>cook burger<br>(append burger name<br>to order string)
+    K-->>S: Wakeup! Burger is ready!
     Activate S
-    S->>C: Message: Your Order(xxx burgers) is ready! Goodbye!
+    S->>C: Message: Your order([sequence of order]) is ready! Goodbye!
     S-->C: Connection Closed
     Deactivate C
     Deactivate K
     Deactivate S
     Deactivate M
-
 ```
+
 
 ### Client Program
 
