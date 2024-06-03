@@ -183,7 +183,7 @@ sequenceDiagram
     Activate S
     Deactivate M
     S->>C: Message: Welcome to McDonald's, customer #xx
-    C->>S: Message: Can I have [order list] burger(s)?
+    C->>S: Message: Can I have [order list] burger(s)?             
     Note left of C : order list :<br> {bulgogi, cheese, bigmac, chicke}
     S-->>K: Place order in queue
     Deactivate S
