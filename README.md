@@ -184,6 +184,7 @@ sequenceDiagram
     Deactivate M
     S->>C: Message: Welcome to McDonald's, customer #xx
     C->>S: Message: Can I have [sequence of order] burger(s)?
+    Note left of C : sequenc of order :<br> {bulgogi, cheese, bigmac, chicke}
     S-->>K: Place order in queue
     Deactivate S
     Note right of M: Main thread awaits<br>other clients
@@ -193,7 +194,7 @@ sequenceDiagram
     Note right of K: When queue empty,<br>cook burger<br>(append burger name<br>to order string)
     K-->>S: Wakeup! Burger is ready!
     Activate S
-    S->>C: Message: Your order([sequence of order]) is ready! Goodbye!
+    S->>C: Message: Your order([sequence of order]) <br>is ready! Goodbye!
     S-->C: Connection Closed
     Deactivate C
     Deactivate K
