@@ -194,7 +194,7 @@ sequenceDiagram
     Note right of K: When queue empty,<br>cook burger<br>(append burger name<br>to order string)
     K-->>S: Wakeup! Burger is ready!
     Activate S
-    S->>C: Message: Your order([order list]) <br>is ready! Goodbye!
+    S->>C: Message: Your order([order list]) is ready! Goodbye!        
     S-->C: Connection Closed
     Deactivate C
     Deactivate K
