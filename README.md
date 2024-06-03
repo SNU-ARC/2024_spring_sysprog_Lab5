@@ -184,7 +184,7 @@ sequenceDiagram
     Deactivate M
     S->>C: Message: Welcome to McDonald's, customer #xx
     C->>S: Message: Can I have [sequence of order] burger(s)?
-    Note left of C : sequenc of order :<br> {bulgogi, cheese, bigmac, chicke}
+    Note left of C : sequence of order :<br> {bulgogi, cheese, bigmac, chicke}
     S-->>K: Place order in queue
     Deactivate S
     Note right of M: Main thread awaits<br>other clients
