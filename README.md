@@ -189,9 +189,9 @@ sequenceDiagram
     Deactivate S
     Note right of M: Main thread awaits<br>other clients
     loop kitchen task
-      K->>K: Check queue <br> and generate burger
+      K->>K: Check queue <br> and generate burger<br>(append burger name<br>to order string)
     end
-    Note right of K: When queue empty,<br>cook burger<br>(append burger name<br>to order string)
+    Note right of K: When queue empty,<br>wait for 2 sec<br>
     K-->>S: Wakeup! Burger is ready!
     Activate S
     S->>C: Message: Your order([order list]) is ready! Goodbye!        
